@@ -12,7 +12,7 @@ var passPool = lowerAlpha;
 
 
 function userChoice () {
-  var choose = prompt(" pick strength weak( just lowercase) , medium(lower and uppercase), or strong (caps and special characters)" , " 'weak' 'medium' 'strong'   ");
+  var choose = prompt(" pick strength weak( just lowercase) , medium(lower and uppercase), or strong (caps and special characters)" , "");
   choose = choose.toUpperCase();
 if (choose == 'WEAK') {
   passPool = []
@@ -36,7 +36,7 @@ pwMaker();
 function pwMaker () {
 //choose length
 PWA = [];
-var passLength = prompt('choose length between 8 and 128' , ' 8-128 ')
+var passLength = prompt('choose length between 8 and 128' , '');
 
 if (passLength >128) {
   alert('Please enter a suggested value');
