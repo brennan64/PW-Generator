@@ -1,2 +1,3 @@
 # PW-Generator
-Javascript password generator
+Javascript password generator.
+An application that creates passwords based on user inputs.
