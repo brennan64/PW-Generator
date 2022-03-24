@@ -17,7 +17,7 @@ var password = document.querySelector('#password');
 var passPool = lowerAlpha;
 
 function userChoice () {
-  var choose = prompt(" pick strength easy , medium, or strong to include caps and special characters");
+  var choose = prompt(" pick strength weak , medium, or strong to include caps and special characters");
 if (choose == 'weak') {
   pwMaker();
 }
