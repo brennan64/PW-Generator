@@ -4,6 +4,7 @@ var lowerAlpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o', '
  var upperC = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V' , 'W', 'X', 'Y', 'Z'];
  var special = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '=', '+', '|', '?','/', ';', ':'];
 var PWA = [];
+var passPool = []
 
 
 
@@ -20,15 +21,16 @@ function userChoice () {
   var choose = prompt(" pick strength weak , medium, or strong to include caps and special characters");
   choose = choose.toUpperCase();
 if (choose == 'WEAK') {
-  passPool = lowerAlpha;
+  passPool = []
+  passPool = passPool.concat(lowerAlpha);
   pwMaker();
 }
  else if (choose == 'MEDIUM') {
-  
+  passPool =[];
   passPool = passPool.concat(upperC, lowerAlpha);
   pwMaker();
 } else if (choose == 'STRONG') {
-
+passPool = [];
 passPool = passPool.concat(upperC, special);
 pwMaker();
 };
