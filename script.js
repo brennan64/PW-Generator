@@ -4,18 +4,12 @@ var lowerAlpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o', '
  var upperC = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V' , 'W', 'X', 'Y', 'Z'];
  var special = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '=', '+', '|', '?','/', ';', ':'];
 var PWA = [];
-var passPool = []
+var passPool = [];
 
-
-
-
-// Assignment Code
 var generateBtn = document.querySelector("#generate");
 var password = document.querySelector('#password');
-// Write password to the #password input
-
-// Add event listener to generate button'
 var passPool = lowerAlpha;
+
 
 function userChoice () {
   var choose = prompt(" pick strength weak( just lowercase) , medium(lower and uppercase), or strong (caps and special characters)" , " 'weak' 'medium' 'strong'   ");
@@ -37,7 +31,6 @@ pwMaker();
   alert('please enter a suggested value');
 };
 
-
 };
 
 function pwMaker () {
@@ -54,15 +47,13 @@ if (passLength >128) {
 for (i=0; i<passLength; i++)  {
   
   var oneChar = passPool[Math.floor(Math.random() * passPool.length)];
-PWA.push(oneChar);
-}
+  PWA.push(oneChar);
+};
 
 password.innerHTML = PWA.join('')
 PWA = [];
 };
 };
-
-
 
 generateBtn.addEventListener("click", userChoice);
 
